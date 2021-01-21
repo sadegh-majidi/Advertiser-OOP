@@ -10,6 +10,11 @@ public class BaseAdvertising {
         this.views = 0;
     }
 
+    protected BaseAdvertising(int id) {
+        this();
+        this.id = id;
+    }
+
     public int getClicks() {
         return this.clicks;
     }
