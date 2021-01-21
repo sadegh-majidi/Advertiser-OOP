@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Ad extends BaseAdvertising {
     private static List<Integer> ids = new ArrayList<>();
+
     private String title;
     private String imgURL;
     private String link;
@@ -13,7 +14,7 @@ public class Ad extends BaseAdvertising {
     public Ad(int id, String title, String imgURL, String link, Advertiser advertiser) {
         super();
         if (Ad.ids.stream().anyMatch(integer -> integer == id))
-            throw new IllegalArgumentException("Ad id Should be unique.");
+            throw new IllegalArgumentException("Id " + id + " is duplicated. Id of the Ad Should be unique.");
         if (advertiser == null)
             throw new NullPointerException("Must provide an advertiser to ad.");
         super.id = id;

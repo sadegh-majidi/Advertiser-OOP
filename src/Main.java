@@ -33,6 +33,7 @@ public class Main {
             Advertiser.help();
         } catch (IllegalArgumentException | NullPointerException e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

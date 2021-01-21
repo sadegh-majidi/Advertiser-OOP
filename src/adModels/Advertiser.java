@@ -11,7 +11,7 @@ public class Advertiser extends BaseAdvertising {
     public Advertiser(int id, String name) {
         super();
         if (Advertiser.allAdvertisers.stream().anyMatch(advertiser -> advertiser.id == id))
-            throw new IllegalArgumentException("Advertiser id Should be unique.");
+            throw new IllegalArgumentException("Id " + id + " is duplicated. Advertiser's id Should be unique.");
         super.id = id;
         this.name = name;
         Advertiser.allAdvertisers.add(this);
