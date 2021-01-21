@@ -1,18 +1,13 @@
 package adModels;
 
 public class BaseAdvertising {
-    private int id;
-    private int clicks;
-    private int views;
+    protected int id;
+    protected int clicks;
+    protected int views;
 
     public BaseAdvertising() {
         this.clicks = 0;
         this.views = 0;
-    }
-
-    protected BaseAdvertising(int id) {
-        this();
-        this.id = id;
     }
 
     public int getClicks() {

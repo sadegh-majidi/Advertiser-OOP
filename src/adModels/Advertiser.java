@@ -9,7 +9,8 @@ public class Advertiser extends BaseAdvertising {
     private String name;
 
     public Advertiser(int id, String name) {
-        super(id);
+        super();
+        super.id = id;
         this.name = name;
         Advertiser.allAdvertisers.add(this);
     }
